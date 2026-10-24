@@ -1,0 +1,24 @@
+{
+  "name": "beyond-basics",
+  "version": "1.0.0",
+  "description": "Beyond Basics builds confidence, communication and digital skills through accessible, practical learning.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "start": "npx serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ameeliya/beyond-basics.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ameeliya/beyond-basics/issues"
+  },
+  "homepage": "https://github.com/Ameeliya/beyond-basics#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
