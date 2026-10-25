@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#102a2a">
+<meta name="description" content="Beyond Basics builds confidence, communication and digital skills through accessible, practical learning.">
+<title>Beyond Basics — Beyond the Basics. Beyond the Barriers.</title>
+<style>
+:root{--ink:#172d2c;--deep:#102a2a;--teal:#286b63;--mint:#dcece4;--cream:#f7f5ef;--paper:#fffefa;--muted:#687775;--line:#dfe5df;--gold:#d9a85f;--danger:#a33d36;--shadow:0 18px 55px rgba(16,42,42,.09);--radius:22px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}button,input,textarea,select{font:inherit}button,a{touch-action:manipulation}a{color:inherit;text-decoration:none}button{cursor:pointer}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;font-weight:800;color:var(--teal)}h1,h2,h3,p{margin-top:0}h1,h2,h3{letter-spacing:-.04em;line-height:1.08}h1{font-size:clamp(2.8rem,7vw,5.8rem);max-width:800px;margin:20px 0}h2{font-size:clamp(2rem,4vw,3.4rem);margin-bottom:18px}h3{font-size:1.35rem}.lead{font-size:1.12rem;max-width:650px;color:#50615e}.muted{color:var(--muted)}.small{font-size:.88rem}.btn{border:0;border-radius:999px;padding:13px 20px;font-weight:750;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:transform .18s,background .18s}.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--deep);color:white}.btn-primary:hover{background:var(--teal)}.btn-secondary{background:var(--mint);color:var(--deep)}.btn-outline{background:transparent;border:1px solid #b9c8c0;color:var(--deep)}.btn-danger{background:#fae8e5;color:var(--danger)}.btn-small{padding:8px 13px;font-size:.88rem}.site-header{position:sticky;top:0;z-index:20;background:rgba(247,245,239,.93);backdrop-filter:blur(14px);border-bottom:1px solid rgba(223,229,223,.85)}.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;font-weight:850;letter-spacing:-.04em;font-size:1.13rem}.brand-mark{width:38px;height:38px;border-radius:12px;background:var(--deep);color:#e6f0e9;display:grid;place-items:center;font-size:1.2rem}.nav-links{display:flex;align-items:center;gap:24px;font-size:.91rem;font-weight:650}.nav-links a:hover{color:var(--teal)}.menu-toggle{display:none;background:transparent;border:1px solid var(--line);border-radius:10px;padding:8px 11px}.hero{padding:84px 0 76px;overflow:hidden;position:relative}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:45px;align-items:center}.hero .lead{margin-bottom:28px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px}.hero-art{min-height:420px;position:relative;display:grid;place-items:center}.art-circle{width:min(370px,85vw);aspect-ratio:1;border-radius:50%;background:var(--mint);position:relative;display:grid;place-items:center}.art-circle:before{content:"";position:absolute;inset:25px;border:1px solid rgba(40,107,99,.25);border-radius:50%}.art-book{position:absolute;width:210px;height:160px;background:var(--paper);border-radius:13px;box-shadow:var(--shadow);transform:rotate(-7deg);display:flex;overflow:hidden}.art-book:before{content:"";width:50%;border-right:2px solid #e1e6df;background:linear-gradient(145deg,#fffefa,#eef4ed)}.art-book:after{content:"";position:absolute;left:25px;right:25px;top:42px;height:5px;background:#bfd7cb;box-shadow:0 22px #dce7df,0 44px #dce7df,95px 0 #dce7df,95px 22px #dce7df}.art-tag{position:absolute;background:var(--deep);color:white;padding:13px 17px;border-radius:14px;font-weight:750;box-shadow:var(--shadow)}.tag-one{top:42px;right:0;transform:rotate(5deg)}.tag-two{bottom:45px;left:0;background:#fffefa;color:var(--deep);transform:rotate(-5deg)}.hero-note{position:absolute;bottom:0;right:15px;font-size:.78rem;color:var(--muted)}.section{padding:82px 0}.section-white{background:var(--paper)}.section-head{max-width:730px;margin-bottom:36px}.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.pillar,.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:27px;box-shadow:0 8px 25px rgba(16,42,42,.025)}.pillar:nth-child(2){background:#edf4ef}.pillar-icon{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;background:var(--mint);font-size:1.35rem;margin-bottom:23px}.pillar p,.card p{color:var(--muted);margin-bottom:0}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.step-number{font-size:.8rem;font-weight:850;color:var(--teal);letter-spacing:.12em;margin-bottom:16px}.step{padding:23px 0;border-top:1px solid var(--line)}.impact-band{background:var(--deep);color:#f5f5ec;border-radius:28px;padding:clamp(28px,5vw,55px);display:grid;grid-template-columns:1fr .8fr;gap:30px;align-items:center}.impact-band p{color:#c5d4cd}.impact-list{display:grid;gap:12px}.impact-item{border:1px solid rgba(255,255,255,.17);padding:15px 18px;border-radius:13px;color:#edf5ee}.cta-strip{display:flex;justify-content:space-between;align-items:center;gap:25px;padding:35px 0}.cta-strip h2{font-size:clamp(1.7rem,3vw,2.5rem);margin:0}.footer{background:#0b2222;color:#dce7e0;padding:45px 0 25px}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px;padding-bottom:35px}.footer a{color:#dce7e0}.footer a:hover{color:white}.footer-links{display:grid;gap:8px;font-size:.9rem}.footer-bottom{border-top:1px solid #2c4543;padding-top:18px;color:#aebfba;font-size:.82rem;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.page{display:none;min-height:60vh}.page.active{display:block}.page-top{padding:62px 0 32px}.page-top h1{font-size:clamp(2.5rem,5vw,4.3rem)}.lesson-layout{display:grid;grid-template-columns:270px 1fr;gap:25px;align-items:start}.course-side{position:sticky;top:100px}.filter-row{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0 28px}.filter-btn{border:1px solid var(--line);background:var(--paper);padding:9px 14px;border-radius:999px;font-weight:700;font-size:.9rem}.filter-btn.active{background:var(--deep);color:white;border-color:var(--deep)}.lesson-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.lesson-card{display:flex;flex-direction:column;gap:12px}.lesson-meta{display:flex;justify-content:space-between;gap:10px;font-size:.78rem;color:var(--teal);font-weight:800;text-transform:uppercase;letter-spacing:.06em}.lesson-card h3{margin:0}.lesson-card .btn{align-self:flex-start;margin-top:auto}.lesson-content{max-width:800px}.lesson-content .card{margin:22px 0}.lesson-content li{margin:8px 0}.quiz-option{display:flex;gap:10px;align-items:flex-start;padding:12px;border:1px solid var(--line);border-radius:12px;margin:9px 0;cursor:pointer}.quiz-option:has(input:checked){background:var(--mint);border-color:var(--teal)}.feedback{padding:12px 14px;border-radius:12px;margin-top:12px;display:none}.feedback.show{display:block}.feedback.good{background:#e0f2e7;color:#20573a}.feedback.bad{background:#fae8e5;color:#87352f}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{display:grid;gap:6px;margin-bottom:14px}.field label{font-size:.9rem;font-weight:750}.field input,.field textarea,.field select{width:100%;border:1px solid #cbd6ce;background:white;border-radius:11px;padding:12px 13px;color:var(--ink)}.field textarea{min-height:110px;resize:vertical}.field input:focus,.field textarea:focus,.field select:focus,button:focus-visible,a:focus-visible{outline:3px solid #9bc8b8;outline-offset:2px}.notice{background:#fff3d8;border:1px solid #ead7a5;border-radius:14px;padding:15px 17px;color:#5c4b27;font-size:.91rem}.success{background:#e0f2e7;color:#20573a;border-radius:12px;padding:12px;display:none}.success.show{display:block}.admin-shell{display:grid;grid-template-columns:220px 1fr;gap:22px}.admin-tabs{display:grid;gap:8px;align-content:start}.admin-tab{text-align:left;background:transparent;border:1px solid var(--line);padding:12px;border-radius:12px;font-weight:750}.admin-tab.active{background:var(--deep);color:white}.admin-panel{display:none}.admin-panel.active{display:block}.admin-list{display:grid;gap:10px;margin-top:18px}.admin-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px;border:1px solid var(--line);border-radius:12px;background:white}.admin-row p{margin:3px 0 0;color:var(--muted);font-size:.85rem}.admin-row-actions{display:flex;gap:7px;flex-wrap:wrap}.login-box{max-width:480px;margin:30px auto 70px}.login-box .card{padding:clamp(22px,5vw,36px)}.hidden{display:none!important}.empty-state{padding:30px;border:1px dashed #bdcbc2;border-radius:16px;text-align:center;color:var(--muted)}.tag{display:inline-block;border-radius:999px;padding:5px 9px;background:#e9f2ec;color:var(--teal);font-size:.76rem;font-weight:800}.divider{height:1px;background:var(--line);margin:22px 0}.legal-copy{max-width:780px}.toast{position:fixed;bottom:20px;right:20px;z-index:100;max-width:min(360px,calc(100% - 40px));background:var(--deep);color:white;padding:13px 17px;border-radius:12px;box-shadow:var(--shadow);display:none}.toast.show{display:block}
+@media(max-width:850px){.hero-grid{grid-template-columns:1fr}.hero-art{min-height:330px}.art-circle{width:300px}.pillars{grid-template-columns:1fr}.steps{grid-template-columns:repeat(2,1fr)}.impact-band{grid-template-columns:1fr}.lesson-layout{grid-template-columns:1fr}.course-side{position:static}.admin-shell{grid-template-columns:1fr}.admin-tabs{grid-template-columns:repeat(3,1fr)}.footer-grid{grid-template-columns:1fr 1fr}.nav-links{gap:13px}}
+@media(max-width:620px){.wrap{width:min(100% - 28px,1160px)}.nav{min-height:68px}.menu-toggle{display:block}.nav-links{display:none;position:absolute;left:0;right:0;top:68px;padding:18px 20px 22px;background:var(--cream);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:14px}.nav-links.open{display:flex}.nav-links .btn{align-self:flex-start}.hero{padding:54px 0 42px}.hero-art{min-height:300px}.art-circle{width:260px}.art-book{width:175px;height:135px}.tag-one{right:-2px;top:20px}.tag-two{bottom:25px;left:-2px}.section{padding:60px 0}.steps{grid-template-columns:1fr 1fr;gap:10px}.lesson-grid{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr;gap:0}.footer-grid{grid-template-columns:1fr}.cta-strip{align-items:flex-start;flex-direction:column}.admin-tabs{grid-template-columns:1fr 1fr}.admin-row{align-items:flex-start;flex-direction:column}.footer-bottom{flex-direction:column}.page-top{padding:45px 0 25px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="#home" class="brand" aria-label="Beyond Basics home"><span class="brand-mark">b.</span><span>Beyond Basics</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="#about">Our Mission</a><a href="#learning">Learning</a><a href="#approach">Our Approach</a><a href="#get-involved">Get Involved</a>
+      <a href="#login" class="btn btn-primary btn-small">Learner login ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="page active" id="page-home" data-page="home">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Practical learning. Lasting confidence.</div>
+        <h1>Beyond the basics.<br><span style="color:var(--teal)">Beyond the barriers.</span></h1>
+        <p class="lead">Building confidence, communication, and digital skills through accessible, practical learning.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#about">Explore our mission <span aria-hidden="true">↗</span></a><a class="btn btn-secondary" href="#learning">Discover learning</a></div>
+        <p class="small muted" style="margin-top:24px">A learning initiative in development, built around dignity, access, and opportunity.</p>
+      </div>
+      <div class="hero-art" aria-label="Illustration of an open learning book">
+        <div class="art-circle"><div class="art-book" aria-hidden="true"></div></div>
+        <div class="art-tag tag-one">Skills that open doors ↗</div><div class="art-tag tag-two">Learn. Practise. Grow.</div>
+        <div class="hero-note">Every learner deserves room to grow.</div>
+      </div>
+    </div>
+  </section>
+  <section class="section section-white">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">What we stand for</div><h2>Skills are more than checkboxes.</h2><p class="lead">Practical learning can make everyday tasks feel more manageable, communication more confident, and technology more accessible.</p></div>
+      <div class="pillars">
+        <article class="pillar"><div class="pillar-icon" aria-hidden="true">✳</div><div class="eyebrow">01 / Communicate</div><h3>English for everyday life</h3><p>Build useful vocabulary, practise common conversations, and grow confidence with reading and writing.</p></article>
+        <article class="pillar"><div class="pillar-icon" aria-hidden="true">⌘</div><div class="eyebrow">02 / Navigate</div><h3>Digital skills for today</h3><p>Learn practical computer skills, from managing files to using email and navigating the internet safely.</p></article>
+        <article class="pillar"><div class="pillar-icon" aria-hidden="true">↗</div><div class="eyebrow">03 / Grow</div><h3>Confidence through practice</h3><p>Learn step by step, revisit concepts, and build independence through useful, real-world activities.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="home-approach">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">A thoughtful process</div><h2>Learning that starts with real life.</h2><p class="lead">Our proposed model puts practical needs first. Lessons are designed to be approachable, respectful, and useful beyond the learning platform.</p></div>
+      <div class="steps">
+        <div class="step"><div class="step-number">STEP 01</div><h3>Listen</h3><p class="muted">Understand learners' goals, experience, and priorities.</p></div>
+        <div class="step"><div class="step-number">STEP 02</div><h3>Learn</h3><p class="muted">Explore clear, structured lessons at an appropriate pace.</p></div>
+        <div class="step"><div class="step-number">STEP 03</div><h3>Practise</h3><p class="muted">Try realistic activities that build practical skills.</p></div>
+        <div class="step"><div class="step-number">STEP 04</div><h3>Reflect</h3><p class="muted">Review progress and improve the learning experience.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="section section-white"><div class="wrap"><div class="impact-band"><div><div class="eyebrow" style="color:#a9d4c3">Accountability matters</div><h2>Impact should be measured, not assumed.</h2><p>Beyond Basics is in development. We intend to evaluate progress through practical skills demonstrated, lesson completion, learner feedback, and confidence with everyday tasks—not inflated numbers.</p><a href="#approach" class="btn btn-secondary">Our approach ↗</a></div><div class="impact-list"><div class="impact-item">01 &nbsp; Skills demonstrated in practical tasks</div><div class="impact-item">02 &nbsp; Learning progress over time</div><div class="impact-item">03 &nbsp; Learner feedback and experience</div><div class="impact-item">04 &nbsp; Lessons improved through reflection</div></div></div></div></section>
+  <section class="section"><div class="wrap cta-strip"><div><div class="eyebrow">Take the next step</div><h2>Build a more accessible path to learning.</h2><p class="muted" style="margin:10px 0 0">Explore the proposed curriculum or enquire about the initiative.</p></div><a href="#get-involved" class="btn btn-primary">Get in touch ↗</a></div></section>
+</section>
+
+<section class="page" id="page-about" data-page="about">
+  <div class="wrap page-top"><div class="eyebrow">About Beyond Basics</div><h1>Opportunity should not stop at the basics.</h1><p class="lead">We are developing a practical learning initiative to make English communication and digital literacy more accessible to school support staff.</p></div>
+  <section class="section section-white"><div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:38px"><div><div class="eyebrow">Our purpose</div><h2>Learning with dignity at its centre.</h2></div><div><p>Everyday communication and digital tasks are part of modern life. Access to structured learning, however, is not always equal. Beyond Basics aims to create an approachable way for school support staff to practise useful skills and develop confidence on their own terms.</p><p>Our approach is grounded in respect. Learners bring their own knowledge, experience, and strengths; the programme is designed to build on them rather than define people by what they have not yet learned.</p></div></div></section>
+  <section class="section"><div class="wrap"><div class="section-head"><div class="eyebrow">Our principles</div><h2>How we intend to work.</h2></div><div class="pillars"><article class="pillar"><h3>Respect first</h3><p>Use inclusive language and treat each learner as an active participant.</p></article><article class="pillar"><h3>Practical by design</h3><p>Prioritise skills learners can practise and apply in everyday situations.</p></article><article class="pillar"><h3>Improve with evidence</h3><p>Use feedback and observed learning to refine content and delivery.</p></article></div><p class="notice" style="margin-top:25px"><strong>Current stage:</strong> Beyond Basics is being planned and developed. Programme details, delivery arrangements, and partnerships will be updated as they are confirmed.</p></div></section>
+</section>
+
+<section class="page" id="page-learning" data-page="learning">
+  <div class="wrap page-top"><div class="eyebrow">Learning library</div><h1>Small steps. Useful skills.</h1><p class="lead">Explore the proposed lessons. These starter lessons are examples for the developing programme, not evidence of a launched course.</p>
+    <div class="filter-row" id="lessonFilters"><button class="filter-btn active" data-filter="all">All lessons</button><button class="filter-btn" data-filter="English">English</button><button class="filter-btn" data-filter="Digital Skills">Digital skills</button></div>
+    <div class="lesson-grid" id="lessonGrid"></div>
+  </div>
+</section>
+
+<section class="page" id="page-lesson" data-page="lesson">
+  <div class="wrap page-top lesson-content"><a href="#learning" class="btn btn-outline btn-small">← All lessons</a><div id="lessonDetail"></div></div>
+</section>
+
+<section class="page" id="page-approach" data-page="approach">
+  <div class="wrap page-top"><div class="eyebrow">Our approach</div><h1>Designed around people, not platforms.</h1><p class="lead">The technology should make learning easier to access—not become another barrier.</p></div>
+  <section class="section section-white"><div class="wrap"><div class="pillars"><article class="pillar"><div class="pillar-icon">◎</div><h3>Start with learner needs</h3><p>Identify current experience, practical goals, and preferred pace before shaping learning activities.</p></article><article class="pillar"><div class="pillar-icon">▤</div><h3>Keep it practical</h3><p>Use clear instructions, familiar examples, guided practice, and short checks for understanding.</p></article><article class="pillar"><div class="pillar-icon">↻</div><h3>Review and improve</h3><p>Use feedback and observed progress to update lessons and improve accessibility.</p></article></div></div></section>
+  <section class="section"><div class="wrap" style="max-width:820px"><h2>Proposed delivery model</h2><p>The initial planning model considers 30-minute sessions four days per week, with a dedicated computer-literacy session on Thursdays. This is a proposal, not a confirmed timetable, and may change after practical arrangements and learner needs are reviewed.</p><h3>How progress could be reviewed</h3><ul><li>Can the learner complete a practical task with less support over time?</li><li>Can the learner apply a skill in a familiar everyday situation?</li><li>Which lessons or instructions need to be made clearer?</li><li>What feedback do learners share about the experience?</li></ul><p class="muted small">Progress should support learning, not rank or embarrass learners. Public impact claims will only be added when supported by real, appropriately collected evidence.</p></div></section>
+</section>
+
+<section class="page" id="page-get-involved" data-page="get-involved">
+  <div class="wrap page-top"><div class="eyebrow">Get involved</div><h1>Help make practical learning more accessible.</h1><p class="lead">If you represent a school, have relevant educational experience, or would like to learn more about the initiative, send an enquiry.</p></div>
+  <section class="section section-white"><div class="wrap" style="display:grid;grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr);gap:40px;align-items:start"><div><h2>Start a conversation.</h2><p class="muted">Choose the enquiry type that best describes your interest. Please do not include sensitive personal or employment information.</p><div class="card"><h3>Potential pathways</h3><p>School partnerships, educator input, student collaboration, or general questions about the developing initiative.</p></div></div>
+  <form class="card" id="contactForm"><div class="form-grid"><div class="field"><label for="contactName">Your name</label><input id="contactName" name="name" required maxlength="100" autocomplete="name"></div><div class="field"><label for="contactEmail">Email address</label><input id="contactEmail" name="email" type="email" required maxlength="180" autocomplete="email"></div></div><div class="field"><label for="contactType">Enquiry type</label><select id="contactType" name="type" required><option value="">Choose one</option><option>School / institutional partnership</option><option>Educator / facilitator</option><option>Student collaboration</option><option>General enquiry</option></select></div><div class="field"><label for="contactMessage">Message</label><textarea id="contactMessage" name="message" required maxlength="1500" placeholder="How would you like to connect?"></textarea></div><label class="small"><input type="checkbox" id="contactConsent" required> I agree that my details may be used to respond to this enquiry.</label><p class="small muted" style="margin-top:12px">Your enquiry will be submitted securely through Formspree so the Beyond Basics team can respond. Please do not include sensitive personal or employment information.</p><div style="margin-top:16px"><button class="btn btn-primary" type="submit">Send enquiry ↗</button></div><div class="success" id="contactSuccess" role="status" style="margin-top:15px"></div></form></div></section>
+</section>
+
+<section class="page" id="page-login" data-page="login">
+  <div class="wrap page-top"><div class="eyebrow">Learning portal</div><h1>Welcome back.</h1><p class="lead">Sign in to access lessons and learning tools.</p></div>
+  <div class="wrap login-box"><div class="card"><div class="notice">This single-file version is a front-end demonstration. It does not provide secure accounts or synchronise learner data between devices. See the Admin &amp; editing section for how content changes work.</div><h2 style="font-size:1.8rem;margin-top:25px">Demo portal access</h2><p class="muted small">Use the demo role selector to preview the experience. This is not real authentication and must not be used for confidential learner information.</p><div class="field"><label for="demoRole">Preview as</label><select id="demoRole"><option value="learner">Learner</option><option value="teacher">Teacher / facilitator</option></select></div><button class="btn btn-primary" id="demoLogin">Open demo dashboard →</button><div class="divider"></div><p class="small muted">For real user accounts, secure authentication, and shared progress, connect a backend such as Supabase and configure server-side permissions.</p></div></div>
+</section>
+
+<section class="page" id="page-dashboard" data-page="dashboard">
+  <div class="wrap page-top"><div class="eyebrow">Learning portal · Demo</div><h1 id="dashboardHeading">Your learning space.</h1><p class="lead" id="dashboardIntro">Continue exploring practical lessons.</p><button class="btn btn-outline btn-small" id="dashboardLogout">Exit demo</button></div>
+  <section class="section section-white"><div class="wrap" id="dashboardContent"></div></section>
+</section>
+
+<section class="page" id="page-admin" data-page="admin">
+  <div class="wrap page-top"><div class="eyebrow">Website management</div><h1>Edit your content.</h1><p class="lead">Add lessons, update page copy, and export your changes. No code editing is needed for content changes in this browser.</p>
+    <div class="notice"><strong>Important limitation:</strong> edits are saved in this browser only. To publish those edits for every visitor on Vercel, export the content JSON and include it in a new deployment, or connect a real database/CMS. This page is not a secure admin login; do not use it to store private data.</div>
+  </div>
+  <section class="section section-white"><div class="wrap admin-shell">
+    <div class="admin-tabs" role="tablist" aria-label="Website editor sections"><button class="admin-tab active" data-admin-tab="lessons">Lessons</button><button class="admin-tab" data-admin-tab="pages">Page text</button><button class="admin-tab" data-admin-tab="backup">Import / export</button></div>
+    <div>
+      <div class="admin-panel active" id="admin-lessons">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap"><div><h2 style="font-size:1.9rem;margin:0">Lesson library</h2><p class="muted small">Changes save automatically in this browser.</p></div><button class="btn btn-primary" id="newLessonBtn">＋ Add lesson</button></div>
+        <form id="lessonEditor" class="card hidden" style="margin-top:18px">
+          <h3 id="lessonEditorTitle">Add a lesson</h3><input type="hidden" id="editLessonId">
+          <div class="form-grid"><div class="field"><label for="lessonTitle">Lesson title</label><input id="lessonTitle" required maxlength="120"></div><div class="field"><label for="lessonCategory">Category</label><select id="lessonCategory"><option>English</option><option>Digital Skills</option></select></div></div>
+          <div class="form-grid"><div class="field"><label for="lessonLevel">Level</label><select id="lessonLevel"><option>Beginner</option><option>Foundations</option><option>Everyday Practice</option></select></div><div class="field"><label for="lessonDuration">Estimated minutes</label><input id="lessonDuration" type="number" min="1" max="180" value="10" required></div></div>
+          <div class="field"><label for="lessonSummary">Short description</label><textarea id="lessonSummary" required maxlength="500" style="min-height:75px"></textarea></div>
+          <div class="field"><label for="lessonObjective">Learning objective</label><input id="lessonObjective" required maxlength="300" placeholder="By the end, learners can…"></div>
+          <div class="field"><label for="lessonBody">Lesson content (one paragraph or bullet per line)</label><textarea id="lessonBody" required style="min-height:180px" placeholder="Start with a simple explanation.&#10;Give a practical example.&#10;Add a step learners can practise."></textarea></div>
+          <div class="field"><label for="lessonQuestion">Knowledge-check question (optional)</label><input id="lessonQuestion" maxlength="300"></div>
+          <div class="field"><label for="lessonOptions">Answer options (one per line; optional)</label><textarea id="lessonOptions" style="min-height:90px" placeholder="Option one&#10;Option two&#10;Option three"></textarea></div>
+          <div class="field"><label for="lessonCorrect">Correct answer number (1-based; optional)</label><input id="lessonCorrect" type="number" min="1" max="20" placeholder="e.g. 2"></div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn btn-primary" type="submit">Save lesson</button><button class="btn btn-outline" type="button" id="cancelLessonEdit">Cancel</button></div>
+        </form>
+        <div class="admin-list" id="adminLessonList"></div>
+      </div>
+      <div class="admin-panel" id="admin-pages">
+        <h2 style="font-size:1.9rem">Edit key page text</h2><p class="muted">These changes are local to this browser until you export and redeploy.</p>
+        <form id="pageEditor" class="card"><div class="field"><label for="editHeroTitle">Home headline</label><input id="editHeroTitle" maxlength="180"></div><div class="field"><label for="editHeroLead">Home supporting text</label><textarea id="editHeroLead" maxlength="500"></textarea></div><div class="field"><label for="editMissionTitle">Mission section heading</label><input id="editMissionTitle" maxlength="180"></div><div class="field"><label for="editMissionText">Mission section description</label><textarea id="editMissionText" maxlength="1000"></textarea></div><div class="field"><label for="editContactEmail">Contact email for enquiry form (optional)</label><input id="editContactEmail" type="email" maxlength="180" placeholder="you@example.com"></div><button class="btn btn-primary" type="submit">Save page text</button></form>
+      </div>
+      <div class="admin-panel" id="admin-backup">
+        <h2 style="font-size:1.9rem">Move content between deployments</h2><p>Export your lessons and editable page text as a JSON file. Keep a backup before importing new content.</p>
+        <div class="card"><h3>Export content</h3><p class="muted small">Downloads a JSON file containing the current lesson library and editable page text.</p><button class="btn btn-primary" id="exportBtn">Export content JSON ↓</button></div>
+        <div class="card" style="margin-top:15px"><h3>Import content</h3><p class="muted small">Choose a JSON file previously exported from this editor. Importing replaces the current local content.</p><div class="field"><label for="importFile">Content JSON file</label><input type="file" id="importFile" accept=".json,application/json"></div><button class="btn btn-secondary" id="importBtn">Import selected file</button></div>
+        <div class="card" style="margin-top:15px"><h3>Reset this browser</h3><p class="muted small">Restores the starter lessons and default page text. This cannot be undone unless you have a backup.</p><button class="btn btn-danger" id="resetBtn">Reset local content</button></div>
+        <div class="notice" style="margin-top:18px"><strong>To publish for everyone:</strong> download the JSON, update the site's embedded starter data with the exported content (or connect a backend/CMS), then deploy the updated file to Vercel. Local browser storage does not update the deployed website for other visitors.</div>
+      </div>
+    </div>
+  </div></section>
+</section>
+
+<section class="page" id="page-privacy" data-page="privacy"><div class="wrap page-top legal-copy"><div class="eyebrow">Privacy</div><h1>Privacy by design.</h1><p>This website is a front-end demonstration. It does not include a server-side account system. Contact form submissions are processed by Formspree and may be delivered to the configured recipient. Content edits and demo progress may be stored in the current browser's local storage.</p><p>Before using the site with real learners, add a complete privacy notice, confirm applicable school and legal requirements, configure secure authentication and database access, and document how personal information is collected, used, retained, and deleted.</p><p>Do not enter confidential, sensitive, or identifying learner information into this demo.</p></div></section>
+<section class="page" id="page-accessibility" data-page="accessibility"><div class="wrap page-top legal-copy"><div class="eyebrow">Accessibility</div><h1>Designed to be approachable.</h1><p>The interface aims to support keyboard navigation, readable text, responsive layouts, visible focus states, and reduced motion preferences. A full accessibility review with assistive technologies and representative users is still needed before claiming conformance to an accessibility standard.</p></div></section>
+<section class="page" id="page-terms" data-page="terms"><div class="wrap page-top legal-copy"><div class="eyebrow">Terms</div><h1>Using this demonstration.</h1><p>This website is a prototype for the Beyond Basics initiative. Lesson content is educational sample material and should be reviewed before formal delivery. Demo login, role switching, and local editing are not secure services and must not be used for confidential information or real learner records.</p></div></section>
+</main>
+
+<footer class="footer"><div class="wrap"><div class="footer-grid"><div><a href="#home" class="brand"><span class="brand-mark">b.</span><span>Beyond Basics</span></a><p style="max-width:330px;color:#b6c7bf;margin-top:18px">Practical learning. Lasting confidence. A developing initiative built around dignity, access, and opportunity.</p></div><div><h3>Explore</h3><div class="footer-links"><a href="#about">Our mission</a><a href="#learning">Learning library</a><a href="#approach">Our approach</a><a href="#get-involved">Get involved</a></div></div><div><h3>Information</h3><div class="footer-links"><a href="#privacy">Privacy</a><a href="#accessibility">Accessibility</a><a href="#terms">Terms of use</a><a href="#admin">Admin &amp; editing</a></div></div></div><div class="footer-bottom"><span>© <span id="year"></span> Beyond Basics. All rights reserved.</span><span>Built around respect. Designed for access.</span></div></div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* BEYOND BASICS — single-file website.
+   For default content changes in the deployed site, edit DEFAULT_LESSONS / DEFAULT_PAGE_TEXT below,
+   or use Admin > Export and carry the JSON into a future deployment.
+   localStorage edits apply only to the current browser. */
+const DEFAULT_LESSONS = [
+ {id:"en-hello",title:"Everyday greetings",category:"English",level:"Beginner",duration:8,summary:"Practise polite greetings and simple introductions.",objective:"Learners can greet someone and introduce themselves using a short sentence.",body:["A greeting is a polite way to begin a conversation.","Common greetings include “Good morning”, “Good afternoon”, and “Hello”.","You can introduce yourself by saying: “Hello, my name is __.”","Practise: greet someone, say your name, and ask “How are you?”."],question:"Which is a polite way to begin a morning conversation?",options:["Good morning.","Give me that.","Go away."],correct:1},
+ {id:"en-ask",title:"Asking for help clearly",category:"English",level:"Beginner",duration:10,summary:"Use simple, polite phrases when you need help or clarification.",objective:"Learners can ask for help using a clear, polite sentence.",body:["It is okay to ask a question when something is unclear.","Useful phrases include “Could you please help me?”, “Could you repeat that, please?”, and “I do not understand this instruction yet.”","Speak at a comfortable pace. Listen to the answer and ask a follow-up question if needed.","Practise: choose one phrase and use it in a realistic situation."],question:"Which phrase politely asks someone to repeat an instruction?",options:["Say it again now!","Could you repeat that, please?","You are not clear."],correct:2},
+ {id:"en-message",title:"Writing a short message",category:"English",level:"Foundations",duration:12,summary:"Learn a simple structure for a clear everyday message.",objective:"Learners can write a short message with a purpose and useful details.",body:["A clear message usually explains why you are writing and includes the details the reader needs.","Example: “Good morning. I have finished cleaning Room 4. Please let me know if anything else is needed. Thank you.”","Use short sentences. Check names, times, and important details before sending.","Practise: write a two-sentence message to share an update politely."],question:"What helps make a message clear?",options:["Leaving out important details","Using one long sentence for everything","Stating the purpose and relevant details"],correct:3},
+ {id:"dig-mouse",title:"Using a mouse or touchpad",category:"Digital Skills",level:"Beginner",duration:9,summary:"Understand pointing, clicking, double-clicking, and scrolling.",objective:"Learners can identify common mouse or touchpad actions.",body:["Move the pointer by moving the mouse or sliding a finger on the touchpad.","A single click usually selects an item or activates a button.","A double-click often opens a file or folder on a computer.","Use the scroll wheel or a two-finger touchpad gesture to move up and down a page.","Practise on a safe, familiar page: point to a heading, click a link, and scroll slowly."],question:"What does a single click commonly do?",options:["Selects an item or activates a button","Deletes every file","Turns off the computer"],correct:1},
+ {id:"dig-files",title:"Understanding files and folders",category:"Digital Skills",level:"Beginner",duration:12,summary:"Learn how folders organise documents and how file names help.",objective:"Learners can explain the difference between a file and a folder.",body:["A file stores information, such as a document, picture, or spreadsheet.","A folder helps organise files, much like a labelled folder holds papers.","Use a clear file name, such as “Meeting Notes October”, so it is easier to find later.","Before moving or deleting a file, check that you have selected the correct item.","Practise: create a practice folder and save a sample document inside it, if a device is available."],question:"What is a folder mainly used for?",options:["To organise files","To charge a computer","To improve screen brightness"],correct:1},
+ {id:"dig-safe",title:"Staying safer online",category:"Digital Skills",level:"Foundations",duration:12,summary:"Recognise suspicious messages and protect personal information.",objective:"Learners can identify a basic warning sign in a suspicious message.",body:["Do not share passwords or verification codes with other people.","Be careful with unexpected messages that demand urgent action or ask you to open an unfamiliar link.","Check the sender and the website address before sharing information.","If a message seems suspicious, do not click its links. Ask a trusted person or your organisation's IT contact for help.","Use unique passwords where possible and enable additional account protection when available."],question:"What should you do with an unexpected message asking for your password?",options:["Reply with the password","Share it with the sender","Do not share it; verify the message through a trusted channel"],correct:3}
+];
+const DEFAULT_PAGE_TEXT = {
+ heroTitle:"Beyond the basics. Beyond the barriers.",
+ heroLead:"Building confidence, communication, and digital skills through accessible, practical learning.",
+ missionTitle:"Skills are more than checkboxes.",
+ missionText:"Practical learning can make everyday tasks feel more manageable, communication more confident, and technology more accessible.",
+ contactEmail:""
+};
+const STORAGE_KEY="beyondBasicsContent_v1";
+let content = loadContent();
+let currentLessonId = null;
+let demoRole = "learner";
+let completed = new Set(JSON.parse(localStorage.getItem("bbDemoProgress") || "[]"));
+function clone(x){return JSON.parse(JSON.stringify(x))}
+function loadContent(){
+ try{const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||"null");if(saved&&Array.isArray(saved.lessons)&&saved.pageText)return {lessons:saved.lessons,pageText:{...clone(DEFAULT_PAGE_TEXT),...saved.pageText}}}catch(e){}
+ return {lessons:clone(DEFAULT_LESSONS),pageText:clone(DEFAULT_PAGE_TEXT)}
+}
+function saveContent(){localStorage.setItem(STORAGE_KEY,JSON.stringify(content));}
+function toast(message){const el=document.getElementById("toast");el.textContent=message;el.classList.add("show");clearTimeout(toast.timer);toast.timer=setTimeout(()=>el.classList.remove("show"),3200)}
+function esc(s=""){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function safeId(){return "lesson-"+Date.now().toString(36)+"-"+Math.random().toString(36).slice(2,7)}
+function applyPageText(){
+ const t=content.pageText;
+ const hero=document.querySelector("#page-home h1");if(hero)hero.innerHTML=esc(t.heroTitle).replace(/\.\s/g,".<br>");
+ const lead=document.querySelector("#page-home .hero .lead");if(lead)lead.textContent=t.heroLead;
+ const mission=document.querySelector("#page-home .section-white h2");if(mission)mission.textContent=t.missionTitle;
+ const missionText=document.querySelector("#page-home .section-white .section-head .lead");if(missionText)missionText.textContent=t.missionText;
+}
+function renderLessons(filter="all"){
+ const grid=document.getElementById("lessonGrid");if(!grid)return;
+ const lessons=content.lessons.filter(l=>filter==="all"||l.category===filter);
+ if(!lessons.length){grid.innerHTML='<div class="empty-state">No lessons in this category yet. Check back soon.</div>';return}
+ grid.innerHTML=lessons.map(l=>`<article class="card lesson-card"><div class="lesson-meta"><span>${esc(l.category)}</span><span>${esc(l.duration)} min</span></div><h3>${esc(l.title)}</h3><p>${esc(l.summary)}</p><div><span class="tag">${esc(l.level)}</span>${completed.has(l.id)?' <span class="tag">Completed ✓</span>':""}</div><button class="btn btn-secondary" data-open-lesson="${esc(l.id)}">Open lesson →</button></article>`).join("");
+ grid.querySelectorAll("[data-open-lesson]").forEach(b=>b.addEventListener("click",()=>openLesson(b.dataset.openLesson)));
+}
+function openLesson(id){
+ const l=content.lessons.find(x=>x.id===id);if(!l)return;
+ currentLessonId=id;location.hash="lesson";
+ const detail=document.getElementById("lessonDetail");
+ let quiz="";
+ if(l.question&&Array.isArray(l.options)&&l.options.length){
+   quiz=`<div class="card"><div class="eyebrow">Quick knowledge check</div><h3>${esc(l.question)}</h3><form id="lessonQuiz">${l.options.map((o,i)=>`<label class="quiz-option"><input type="radio" name="answer" value="${i+1}" required><span>${esc(o)}</span></label>`).join("")}<button class="btn btn-primary" type="submit">Check answer</button><div class="feedback" id="quizFeedback" role="status"></div></form></div>`;
+ }
+ detail.innerHTML=`<div class="eyebrow">${esc(l.category)} · ${esc(l.level)} · ${esc(l.duration)} minutes</div><h1 style="font-size:clamp(2.2rem,5vw,3.7rem);margin-top:15px">${esc(l.title)}</h1><p class="lead">${esc(l.summary)}</p><div class="card"><div class="eyebrow">Learning objective</div><p style="margin:8px 0 0">${esc(l.objective)}</p></div><h2 style="font-size:1.8rem">Let's learn</h2><ol>${l.body.map(p=>`<li>${esc(p)}</li>`).join("")}</ol>${quiz}<div class="card"><h3>Finished practising?</h3><p class="muted">Mark this lesson complete when you are ready. You can return to it at any time.</p><button class="btn btn-primary" id="completeLesson">${completed.has(l.id)?"Completed ✓":"Mark lesson complete ✓"}</button></div>`;
+ const form=document.getElementById("lessonQuiz");
+ if(form)form.addEventListener("submit",e=>{e.preventDefault();const selected=Number(new FormData(form).get("answer"));const fb=document.getElementById("quizFeedback");const good=selected===Number(l.correct);fb.className="feedback show "+(good?"good":"bad");fb.textContent=good?"Correct — well done.": "Not quite. Review the lesson and try again.";});
+ document.getElementById("completeLesson").addEventListener("click",()=>{completed.add(l.id);localStorage.setItem("bbDemoProgress",JSON.stringify([...completed]));document.getElementById("completeLesson").textContent="Completed ✓";renderLessons(document.querySelector(".filter-btn.active")?.dataset.filter||"all");toast("Lesson progress saved in this browser.");});
+ showPage("lesson");
+}
+function showPage(page){
+ document.querySelectorAll(".page").forEach(p=>p.classList.toggle("active",p.dataset.page===page));
+ document.getElementById("navLinks").classList.remove("open");
+ document.getElementById("menuToggle").setAttribute("aria-expanded","false");
+ if(page==="learning")renderLessons(document.querySelector(".filter-btn.active")?.dataset.filter||"all");
+ if(page==="admin")renderAdminLessons();
+ window.scrollTo({top:0,behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});
+}
+function route(){
+ let page=location.hash.replace("#","")||"home";
+ const valid=["home","about","learning","lesson","approach","get-involved","login","dashboard","admin","privacy","accessibility","terms"];
+ if(!valid.includes(page))page="home";
+ if(page==="lesson"&&!currentLessonId){page="learning"}
+ showPage(page);
+}
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener("click",e=>{const page=a.getAttribute("href").slice(1);if(["home","about","learning","lesson","approach","get-involved","login","dashboard","admin","privacy","accessibility","terms"].includes(page)){e.preventDefault();if(location.hash!=="#"+page)history.pushState(null,"","#"+page);route()}}));
+window.addEventListener("hashchange",route);window.addEventListener("popstate",route);
+document.getElementById("menuToggle").addEventListener("click",()=>{const nav=document.getElementById("navLinks");nav.classList.toggle("open");document.getElementById("menuToggle").setAttribute("aria-expanded",nav.classList.contains("open")?"true":"false")});
+document.getElementById("lessonFilters").addEventListener("click",e=>{const b=e.target.closest("[data-filter]");if(!b)return;document.querySelectorAll(".filter-btn").forEach(x=>x.classList.toggle("active",x===b));renderLessons(b.dataset.filter)});
+document.getElementById("demoLogin").addEventListener("click",()=>{demoRole=document.getElementById("demoRole").value;location.hash="dashboard";renderDashboard();});
+document.getElementById("dashboardLogout").addEventListener("click",()=>{location.hash="login"});
+function renderDashboard(){
+ const isTeacher=demoRole==="teacher";
+ document.getElementById("dashboardHeading").textContent=isTeacher?"Facilitator workspace.":"Your learning space.";
+ document.getElementById("dashboardIntro").textContent=isTeacher?"Preview lesson management and the proposed facilitator workflow.":"Continue exploring practical lessons at your own pace.";
+ const c=document.getElementById("dashboardContent");
+ if(isTeacher){c.innerHTML=`<div class="section-head"><div class="eyebrow">Demo view</div><h2>Learning library overview</h2><p class="muted">This preview does not contain real learner records or real account permissions.</p></div><div class="pillars"><div class="pillar"><div class="eyebrow">Lessons in library</div><h2>${content.lessons.length}</h2><p>Sample and locally added lessons</p></div><div class="pillar"><div class="eyebrow">Learning areas</div><h2>2</h2><p>English and digital skills</p></div><div class="pillar"><div class="eyebrow">Management</div><h3>Edit lessons</h3><p>Use the local content editor to add or update lessons.</p><a href="#admin" class="btn btn-secondary" style="margin-top:15px">Open editor →</a></div></div><div style="margin-top:25px"><a href="#learning" class="btn btn-primary">Preview learning library →</a></div>`}
+ else{c.innerHTML=`<div class="section-head"><div class="eyebrow">Your progress · This browser only</div><h2>Keep building your skills.</h2><p class="muted">Progress is saved locally in this browser for demonstration purposes.</p></div><div class="card" style="margin-bottom:25px"><div style="display:flex;justify-content:space-between;gap:12px"><strong>Lessons completed</strong><strong>${completed.size} / ${content.lessons.length}</strong></div><div style="height:9px;background:#e5ebe6;border-radius:99px;overflow:hidden;margin:12px 0"><div style="height:100%;width:${content.lessons.length?Math.min(100,completed.size/content.lessons.length*100):0}%;background:var(--teal)"></div></div></div><div class="lesson-grid">${content.lessons.slice(0,4).map(l=>`<article class="card lesson-card"><div class="lesson-meta"><span>${esc(l.category)}</span><span>${l.duration} min</span></div><h3>${esc(l.title)}</h3><p>${esc(l.summary)}</p><button class="btn btn-secondary" data-dashboard-lesson="${esc(l.id)}">Continue →</button></article>`).join("")}</div><div style="margin-top:25px"><a href="#learning" class="btn btn-primary">Browse all lessons →</a></div>`;
+ c.querySelectorAll("[data-dashboard-lesson]").forEach(b=>b.addEventListener("click",()=>openLesson(b.dataset.dashboardLesson)));
+ }
+}
+function renderAdminLessons(){
+ const list=document.getElementById("adminLessonList");if(!list)return;
+ if(!content.lessons.length){list.innerHTML='<div class="empty-state">No lessons yet. Add your first lesson above.</div>';return}
+ list.innerHTML=content.lessons.map(l=>`<div class="admin-row"><div><strong>${esc(l.title)}</strong><p>${esc(l.category)} · ${esc(l.level)} · ${esc(l.duration)} min</p></div><div class="admin-row-actions"><button class="btn btn-outline btn-small" data-edit="${esc(l.id)}">Edit</button><button class="btn btn-danger btn-small" data-delete="${esc(l.id)}">Delete</button></div></div>`).join("");
+ list.querySelectorAll("[data-edit]").forEach(b=>b.addEventListener("click",()=>editLesson(b.dataset.edit)));
+ list.querySelectorAll("[data-delete]").forEach(b=>b.addEventListener("click",()=>{const l=content.lessons.find(x=>x.id===b.dataset.delete);if(l&&confirm(`Delete “${l.title}”? Export a backup first if you may need it.`)){content.lessons=content.lessons.filter(x=>x.id!==l.id);saveContent();renderAdminLessons();renderLessons();toast("Lesson deleted from this browser.")}}));
+}
+function clearLessonForm(){document.getElementById("lessonEditor").reset();document.getElementById("editLessonId").value="";document.getElementById("lessonDuration").value=10;document.getElementById("lessonEditorTitle").textContent="Add a lesson";document.getElementById("lessonEditor").classList.remove("hidden")}
+function editLesson(id){
+ const l=content.lessons.find(x=>x.id===id);if(!l)return;clearLessonForm();
+ document.getElementById("lessonEditorTitle").textContent="Edit lesson";document.getElementById("editLessonId").value=l.id;document.getElementById("lessonTitle").value=l.title;document.getElementById("lessonCategory").value=l.category;document.getElementById("lessonLevel").value=l.level;document.getElementById("lessonDuration").value=l.duration;document.getElementById("lessonSummary").value=l.summary;document.getElementById("lessonObjective").value=l.objective;document.getElementById("lessonBody").value=l.body.join("\n");document.getElementById("lessonQuestion").value=l.question||"";document.getElementById("lessonOptions").value=(l.options||[]).join("\n");document.getElementById("lessonCorrect").value=l.correct||"";
+ document.getElementById("lessonEditor").scrollIntoView({behavior:"smooth",block:"start"});
+}
+document.getElementById("newLessonBtn").addEventListener("click",()=>{clearLessonForm();document.getElementById("lessonEditor").scrollIntoView({behavior:"smooth",block:"start"})});
+document.getElementById("cancelLessonEdit").addEventListener("click",()=>document.getElementById("lessonEditor").classList.add("hidden"));
+document.getElementById("lessonEditor").addEventListener("submit",e=>{
+ e.preventDefault();
+ const id=document.getElementById("editLessonId").value||safeId();
+ const question=document.getElementById("lessonQuestion").value.trim();
+ const options=document.getElementById("lessonOptions").value.split("\n").map(s=>s.trim()).filter(Boolean);
+ const correct=Number(document.getElementById("lessonCorrect").value)||null;
+ if(question&&options.length<2){alert("Add at least two answer options, or remove the knowledge-check question.");return}
+ if(correct&&correct>options.length){alert("The correct answer number must match one of the answer options.");return}
+ const l={id,title:document.getElementById("lessonTitle").value.trim(),category:document.getElementById("lessonCategory").value,level:document.getElementById("lessonLevel").value,duration:Number(document.getElementById("lessonDuration").value),summary:document.getElementById("lessonSummary").value.trim(),objective:document.getElementById("lessonObjective").value.trim(),body:document.getElementById("lessonBody").value.split("\n").map(s=>s.trim()).filter(Boolean),question,options,correct};
+ if(!l.body.length){alert("Add at least one line of lesson content.");return}
+ const idx=content.lessons.findIndex(x=>x.id===id);if(idx>=0)content.lessons[idx]=l;else content.lessons.push(l);
+ saveContent();renderAdminLessons();renderLessons();document.getElementById("lessonEditor").classList.add("hidden");toast("Lesson saved in this browser. Export content to publish it for everyone.");
+});
+document.querySelectorAll("[data-admin-tab]").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll("[data-admin-tab]").forEach(x=>x.classList.toggle("active",x===b));document.querySelectorAll(".admin-panel").forEach(x=>x.classList.toggle("active",x.id==="admin-"+b.dataset.adminTab));}));
+document.getElementById("pageEditor").addEventListener("submit",e=>{e.preventDefault();content.pageText={heroTitle:document.getElementById("editHeroTitle").value.trim()||DEFAULT_PAGE_TEXT.heroTitle,heroLead:document.getElementById("editHeroLead").value.trim()||DEFAULT_PAGE_TEXT.heroLead,missionTitle:document.getElementById("editMissionTitle").value.trim()||DEFAULT_PAGE_TEXT.missionTitle,missionText:document.getElementById("editMissionText").value.trim()||DEFAULT_PAGE_TEXT.missionText,contactEmail:document.getElementById("editContactEmail").value.trim()};saveContent();applyPageText();toast("Page text saved in this browser.")});
+function fillPageEditor(){const t=content.pageText;document.getElementById("editHeroTitle").value=t.heroTitle;document.getElementById("editHeroLead").value=t.heroLead;document.getElementById("editMissionTitle").value=t.missionTitle;document.getElementById("editMissionText").value=t.missionText;document.getElementById("editContactEmail").value=t.contactEmail||""}
+document.getElementById("exportBtn").addEventListener("click",()=>{const blob=new Blob([JSON.stringify(content,null,2)],{type:"application/json"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="beyond-basics-content.json";a.click();URL.revokeObjectURL(url);toast("Content JSON exported.")});
+document.getElementById("importBtn").addEventListener("click",async()=>{const file=document.getElementById("importFile").files[0];if(!file){alert("Choose a JSON file first.");return}try{const parsed=JSON.parse(await file.text());if(!parsed||!Array.isArray(parsed.lessons)||!parsed.pageText||parsed.lessons.some(l=>!l.title||!l.category||!Array.isArray(l.body)))throw new Error("Invalid content structure");if(!confirm("Import this file and replace the current local lessons and page text?"))return;content={lessons:parsed.lessons,pageText:{...clone(DEFAULT_PAGE_TEXT),...parsed.pageText}};saveContent();applyPageText();fillPageEditor();renderAdminLessons();renderLessons();toast("Content imported into this browser.")}catch(err){alert("Could not import that file. Please use a JSON file exported from this editor.")}});
+document.getElementById("resetBtn").addEventListener("click",()=>{if(!confirm("Reset all local content to the starter version? Export a backup first if needed."))return;content={lessons:clone(DEFAULT_LESSONS),pageText:clone(DEFAULT_PAGE_TEXT)};saveContent();applyPageText();fillPageEditor();renderAdminLessons();renderLessons();toast("Starter content restored in this browser.")});
+document.getElementById("contactForm").addEventListener("submit",async e=>{e.preventDefault();const form=e.currentTarget;const success=document.getElementById("contactSuccess");const submit=form.querySelector('button[type="submit"]');if(!form.reportValidity())return;success.className="success";success.textContent="Sending your enquiry…";success.style.display="block";submit.disabled=true;submit.textContent="Sending…";try{const response=await fetch("https://formspree.io/f/mwllvdja",{method:"POST",body:new FormData(form),headers:{Accept:"application/json"}});if(response.ok){success.textContent="Thank you — your enquiry has been sent successfully. We’ll be in touch if a response is needed.";success.className="success show";form.reset()}else{let detail="";try{const result=await response.json();detail=Array.isArray(result.errors)?" "+result.errors.map(x=>x.message).join(" "):""}catch(_){}success.textContent="Your enquiry could not be sent. Please try again in a moment."+detail;success.className="notice"}}catch(error){success.textContent="We couldn’t connect to the form service. Check your internet connection and try again.";success.className="notice"}finally{submit.disabled=false;submit.textContent="Send enquiry ↗"}});
+document.getElementById("year").textContent=new Date().getFullYear();
+applyPageText();fillPageEditor();renderLessons();route();
+</script>
+</body>
+</html>
