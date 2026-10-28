@@ -66,7 +66,7 @@
         <div class="eyebrow">Practical learning. Lasting confidence.</div>
         <h1>Beyond the basics.<br><span style="color:var(--teal)">Beyond the barriers.</span></h1>
         <p class="lead">Building confidence, communication, and digital skills through accessible, practical learning.</p>
-        <div class="hero-actions"><a class="btn btn-primary" href="#about">Explore our mission <span aria-hidden="true">↗</span></a><a class="btn btn-secondary" href="#learning">Discover learning</a></div>
+        <div class="hero-actions"><a class="btn btn-primary" href="#about">Explore our mission <span aria-hidden="true">↗</span></a><a class="btn btn-secondary" href="#learning" id="heroLearningLink">Discover learning</a></div>
         <p class="small muted" style="margin-top:24px">A learning initiative founded by Ameeliya Poovathany, making practical learning more accessible.</p>
       </div>
       <div class="hero-art" aria-label="Illustration of an open learning book">
@@ -345,7 +345,8 @@ function celebrateLessonCompletion(lessonTitle){
 }
 function updateAuthNavigation(){
  const signedIn=!!activeSupabaseUser;
- const learningLink=document.getElementById("navLearningLink"),getInvolvedLink=document.getElementById("navGetInvolvedLink"),suggestionsLink=document.getElementById("navSuggestionsLink"),dashboardLink=document.getElementById("navDashboardLink"),loginLink=document.getElementById("navLoginLink"),logoutButton=document.getElementById("navLogoutButton");
+ const learningLink=document.getElementById("navLearningLink"),getInvolvedLink=document.getElementById("navGetInvolvedLink"),suggestionsLink=document.getElementById("navSuggestionsLink"),dashboardLink=document.getElementById("navDashboardLink"),loginLink=document.getElementById("navLoginLink"),logoutButton=document.getElementById("navLogoutButton"),heroLearningLink=document.getElementById("heroLearningLink");
+ if(heroLearningLink){heroLearningLink.textContent=signedIn?"Continue learning":"Discover learning";heroLearningLink.href=signedIn?"#dashboard":"#learning";}
  if(learningLink){learningLink.hidden=signedIn;learningLink.setAttribute("aria-hidden",String(signedIn));}
  if(getInvolvedLink){getInvolvedLink.hidden=signedIn;getInvolvedLink.setAttribute("aria-hidden",String(signedIn));}
  if(suggestionsLink){suggestionsLink.hidden=!signedIn;suggestionsLink.setAttribute("aria-hidden",String(!signedIn));}
