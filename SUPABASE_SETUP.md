@@ -33,3 +33,24 @@ After merging the code changes, wait for Vercel to finish deploying. Test with a
 - Submit the existing general contact form and confirm it still works.
 
 If progress does not sync, check the browser console and the Supabase table/policies. A Vercel deployment marked **Ready** does not prove that Supabase settings or form submissions are working.
+
+
+## 4. Set up the private supervisor overview
+
+The same sign-in page serves everyone. An account added to `public.admin_users` is routed to the supervisor overview after sign-in; other accounts go to their own student dashboard. The overview shows student email, account creation date, completed lessons, percentage of the current lesson library completed, and last progress activity.
+
+1. Run the **entire updated** `supabase/setup.sql` in Supabase Dashboard → SQL Editor.
+2. Create your account on the normal website sign-in page (choose **Create student account**) and verify the email if required.
+3. In Supabase Dashboard → **Authentication → Users**, find your account and copy its **User UID**.
+4. In Supabase SQL Editor, run this after replacing the placeholder with your User UID:
+
+   ```sql
+   insert into public.admin_users (user_id)
+   values ('PASTE-YOUR-SUPABASE-USER-UUID-HERE')
+   on conflict (user_id) do nothing;
+   ```
+
+5. Sign out and sign in again. Your account should open **Supervisor overview**; student accounts should open **My Dashboard**.
+6. Test with a separate student account. It should not see the supervisor link, and the database function should deny that account access to the all-student overview.
+
+Only add trusted supervisor accounts to `admin_users`. Do not assign supervisor access based on a form field or email typed into the website, and never expose a Supabase service-role/secret key in browser code. The overview includes learner email addresses, so keep it private and share only necessary summary figures with supervisors.
