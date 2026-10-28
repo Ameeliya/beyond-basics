@@ -33,7 +33,7 @@
     <a href="#home" class="brand" aria-label="Beyond Basics home"><span class="brand-mark">b.</span><span>Beyond Basics</span></a>
     <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
     <nav class="nav-links" id="navLinks" aria-label="Main navigation">
-      <a href="#about">Our Mission</a><a href="#learning" id="navLearningLink">Learning</a><a href="#approach">Our Approach</a><a href="#get-involved" id="navGetInvolvedLink">Get Involved</a><a href="#student-suggestions" id="navSuggestionsLink" hidden>Student Suggestions</a><a href="#dashboard" id="navDashboardLink" hidden>My Dashboard</a>
+      <a href="#about">Our Mission</a><a href="#learning" id="navLearningLink">Learning</a><a href="#approach">Our Approach</a><a href="#get-involved" id="navGetInvolvedLink">Get in Touch</a><a href="#dashboard" id="navDashboardLink" hidden>My Dashboard</a><a href="#student-suggestions" id="navSuggestionsLink" hidden>Student Suggestions</a>
       <a href="#login" class="btn btn-primary btn-small">Learner login ↗</a>
     </nav>
   </div>
@@ -317,10 +317,10 @@ function openLesson(id){
 function updateAuthNavigation(){
  const signedIn=!!activeSupabaseUser;
  const learningLink=document.getElementById("navLearningLink"),getInvolvedLink=document.getElementById("navGetInvolvedLink"),suggestionsLink=document.getElementById("navSuggestionsLink"),dashboardLink=document.getElementById("navDashboardLink");
- if(learningLink)learningLink.hidden=signedIn;
- if(getInvolvedLink)getInvolvedLink.hidden=signedIn;
- if(suggestionsLink)suggestionsLink.hidden=!signedIn;
- if(dashboardLink)dashboardLink.hidden=!signedIn;
+ if(learningLink){learningLink.hidden=signedIn;learningLink.setAttribute("aria-hidden",String(signedIn));}
+ if(getInvolvedLink){getInvolvedLink.hidden=signedIn;getInvolvedLink.setAttribute("aria-hidden",String(signedIn));}
+ if(dashboardLink){dashboardLink.hidden=!signedIn;dashboardLink.setAttribute("aria-hidden",String(!signedIn));}
+ if(suggestionsLink){suggestionsLink.hidden=!signedIn;suggestionsLink.setAttribute("aria-hidden",String(!signedIn));}
 }
 function showPage(page){
  updateAuthNavigation();
@@ -337,7 +337,7 @@ document.getElementById("menuToggle").addEventListener("click",()=>{const nav=do
 document.getElementById("lessonFilters").addEventListener("click",e=>{const b=e.target.closest("[data-filter]");if(!b)return;document.querySelectorAll(".filter-btn").forEach(x=>x.classList.toggle("active",x===b));renderLessons(b.dataset.filter)});
 document.getElementById("authForm").addEventListener("submit",async e=>{e.preventDefault();const feedback=document.getElementById("authFeedback"),btn=document.getElementById("authSubmit"),email=document.getElementById("authEmail").value.trim().toLowerCase(),password=document.getElementById("authPassword").value,mode=document.getElementById("authMode").value;feedback.className="success show";if(!supabaseReady){feedback.textContent="Account sign-in is not active yet. The site owner must add the Supabase project URL and publishable/anon key, then run the supplied database setup SQL.";return;}btn.disabled=true;feedback.textContent="Connecting…";try{const result=mode==="signup"?await supabaseClient.auth.signUp({email,password,options:{emailRedirectTo:location.origin}}):await supabaseClient.auth.signInWithPassword({email,password});if(result.error)throw result.error;if(mode==="signup"&&!result.data.session){feedback.textContent="Account created. Check your email for a verification link, then sign in.";}else{activeSupabaseUser=result.data.user;authReady=true;demoRole=(email===FOUNDER_EMAIL&&FOUNDER_EMAIL!=="set_your_founder_email_in_supabase")?"teacher":"learner";updateAuthNavigation();await loadRemoteProgress();location.hash="dashboard";renderDashboard();feedback.textContent="Signed in successfully.";}}catch(err){feedback.textContent=err.message||"Unable to sign in. Please try again.";}finally{btn.disabled=false;}});
 document.getElementById("dashboardLogout").addEventListener("click",async()=>{if(supabaseClient)await supabaseClient.auth.signOut();activeSupabaseUser=null;completed.clear();authReady=true;updateAuthNavigation();location.hash="login"});
-let authReady=!supabaseReady;if(!supabaseReady){document.getElementById("authStatus").textContent="Setup needed: connect a Supabase project to activate secure student accounts and synced progress.";}else{supabaseClient.auth.getSession().then(async({data})=>{if(data&&data.session){activeSupabaseUser=data.session.user;demoRole=(activeSupabaseUser.email||"").toLowerCase()===FOUNDER_EMAIL&&FOUNDER_EMAIL!=="set_your_founder_email_in_supabase"?"teacher":"learner";await loadRemoteProgress();}authReady=true;updateAuthNavigation();route();}).catch(err=>{console.warn("Could not restore sign-in session",err);authReady=true;route();});}let progressSyncMessage="Your progress is saved in this browser.";
+let authReady=!supabaseReady;if(!supabaseReady){const authStatus=document.getElementById("authStatus");if(authStatus)authStatus.textContent="Setup needed: connect a Supabase project to activate secure student accounts and synced progress."; }else{supabaseClient.auth.getSession().then(async({data})=>{if(data&&data.session){activeSupabaseUser=data.session.user;demoRole=(activeSupabaseUser.email||"").toLowerCase()===FOUNDER_EMAIL&&FOUNDER_EMAIL!=="set_your_founder_email_in_supabase"?"teacher":"learner";await loadRemoteProgress();}authReady=true;updateAuthNavigation();route();}).catch(err=>{console.warn("Could not restore sign-in session",err);authReady=true;route();});}let progressSyncMessage="Your progress is saved in this browser.";
 async function loadRemoteProgress(){
  const localProgress=(()=>{try{return JSON.parse(localStorage.getItem("bbDemoProgress")||"[]")}catch(_){return []}})();
  completed.clear();localProgress.forEach(id=>completed.add(id));
