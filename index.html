@@ -373,5 +373,23 @@ document.getElementById("contactForm").addEventListener("submit",async e=>{e.pre
 const yearElement=document.getElementById("year");if(yearElement)yearElement.textContent=new Date().getFullYear();
 applyPageText();fillPageEditor();renderLessons();route();
 </script>
+
+<!-- Login-page visibility failsafe: keep hash navigation usable if the main app script fails. -->
+<script>
+(function () {
+  function ensureHashPageVisible() {
+    const requested = (window.location.hash || "#home").slice(1);
+    const target = document.getElementById("page-" + requested);
+    if (!target || !target.classList.contains("page")) return;
+    if (!target.classList.contains("active")) {
+      document.querySelectorAll(".page").forEach(function (page) {
+        page.classList.toggle("active", page === target);
+      });
+    }
+  }
+  ensureHashPageVisible();
+  window.addEventListener("hashchange", ensureHashPageVisible);
+})();
+</script>
 </body>
 </html>
