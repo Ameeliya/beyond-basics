@@ -92,7 +92,7 @@ alter table public.form_submissions enable row level security;
 drop policy if exists "Public can submit contact and suggestion forms" on public.form_submissions;
 create policy "Public can submit contact and suggestion forms" on public.form_submissions
   for insert to anon, authenticated
-  with check (form_type in ('enquiry','suggestion') and char_length(message) <= 1500);
+  with check (form_type in ('enquiry','suggestion') and char_length(message) <= 1500 and (user_id is null or user_id = (select auth.uid())));
 revoke all on public.form_submissions from public;
 revoke select, update, delete on public.form_submissions from anon, authenticated;
 grant insert on public.form_submissions to anon, authenticated;
